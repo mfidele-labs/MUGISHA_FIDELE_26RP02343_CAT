@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -14,7 +15,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm ci'
+                sh 'npm install --no-audit --no-fund'
             }
         }
 
@@ -31,3 +32,4 @@ pipeline {
         }
     }
 }
+
