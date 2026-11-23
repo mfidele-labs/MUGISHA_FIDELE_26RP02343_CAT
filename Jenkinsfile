@@ -17,6 +17,15 @@ pipeline {
             }
         }
 
+        stage('Check Environment') {
+            steps {
+                sh 'echo "Node.js version:"'
+                sh 'node --version'
+                sh 'echo "npm version:"'
+                sh 'npm --version'
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
                 sh 'npm install --no-audit --no-fund'
@@ -36,4 +45,3 @@ pipeline {
         }
     }
 }
-
