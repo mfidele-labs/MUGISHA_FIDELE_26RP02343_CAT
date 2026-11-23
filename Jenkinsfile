@@ -6,6 +6,10 @@ pipeline {
         nodejs 'NodeJS'
     }
 
+    environment {
+        CYPRESS_INSTALL_BINARY = '0'
+    }
+
     stages {
         stage('Checkout') {
             steps {
